@@ -1,0 +1,183 @@
+/*----------------------------------------*/
+/*  4.  About Area
+/*----------------------------------------*/
+.about-area {}
+/*-- About Title --*/
+.about-title {
+    margin-bottom: 80px;
+    & h4 {
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-color;
+        line-height: 14px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        @media #{$small-mobile}{
+            font-size: 14px;
+            line-height: 12px;
+        }
+    }
+    & h1 {
+        text-transform: uppercase;
+        font-size: 36px;
+        line-height: 26px;
+        margin-bottom: 0;
+        @media #{$large-mobile}{
+            font-size: 24px;
+            line-height: 18px;
+        }
+        @media #{$small-mobile}{
+            font-size: 20px;
+            line-height: 16px;
+        }
+        & span {
+            color: $theme-color;
+        }
+    }
+}
+/*-- About Content --*/
+.about-content {
+    padding-left: 70px;
+    padding-right: 50px;
+    @media #{$desktop-device}{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    @media #{$tablet-device}{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    @media #{$large-mobile}{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    & h2 {
+        font-size: 30px;
+        line-height: 22px;
+        margin-bottom: 18px;
+        @media #{$large-mobile}{
+            font-size: 24px;
+            line-height: 18px;
+        }
+        @media #{$small-mobile}{
+            font-size: 20px;
+            line-height: 14px;
+        }
+    }
+    & p {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 300;
+        color: $text-color-light;
+        @media #{$small-mobile}{
+            font-size: 14px;
+        }
+    }
+}
+/*-- Skills --*/
+.skills {
+    margin-top: 46px;
+    padding-right: 70px;
+    @media #{$desktop-device}{
+        padding-right: 0px;
+    }
+    @media #{$tablet-device}{
+        padding-right: 0px;
+        margin-top: 0px;
+    }
+    @media #{$large-mobile}{
+        padding-right: 0px;
+        margin-top: 0px;
+    }
+    & .progress-text {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $text-color;
+        line-height: 10px;
+        margin-bottom: 11px;
+    }
+    & .progress {
+        height: 4px;
+        background-color: #f0f0f0;
+        border-radius: 0;
+        box-shadow: none;
+        overflow: visible;
+        & .progress-bar {
+            background-color: $text-color-light;
+            box-shadow: none;
+            position: relative;
+            &::before {
+                bottom: 100%;
+                color: $text-color;
+                content: attr(data-percent);
+                font-size: 14px;
+                line-height: 10px;
+                margin-bottom: 11px;
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+}
+/*-- Funfact --*/
+.fun-facts {
+    margin-left: -15px;
+    margin-right: -15px;
+    border: 1px solid #eee;
+    @media #{$desktop-device}{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    @media #{$tablet-device}{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    @media #{$large-mobile}{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    & .single-fatcs {
+        padding: 38px 15px;
+        width: 25%;
+        float: left;
+        border-right: 1px solid #eee;
+        @media #{$large-mobile}{
+            width: 50%;
+            &:nth-child(1) {
+                border-bottom: 1px solid #eee;
+            }
+            &:nth-child(2) {
+                border-bottom: 1px solid #eee;
+                border-right: 0px solid #eee;
+            }
+        }
+        @media #{$small-mobile}{
+            width: 100%;
+            &:nth-child(1) {
+                border-bottom: 1px solid #eee;
+            }
+            &:nth-child(2) {
+                border-bottom: 1px solid #eee;
+                border-right: 0px solid #eee;
+            }
+            &:nth-child(3) {
+                border-bottom: 1px solid #eee;
+                border-right: 0px solid #eee;
+            }
+        }
+        &:last-child {
+            border-right: 0px solid #eee;
+        }
+        & h2 {
+            font-size: 30px;
+            color: $text-color;
+            font-weight: 600;
+            line-height: 22px;
+        }
+        & p {
+            font-size: 16px;
+            color: $text-color-light;
+            line-height: 18px;
+        }
+    }
+}

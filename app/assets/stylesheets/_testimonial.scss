@@ -1,0 +1,23 @@
+/*----------------------------------------*/
+/*  7.  Testimonial Area
+/*----------------------------------------*/
+.testimonial-area {}
+.testimonial-slider {}
+.testimonial-item {
+    & h3 {
+        background-image: url("img/testimonial-line.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        color: #707070;
+        font-size: 24px;
+        line-height: 18px;
+        margin-bottom: 17px;
+        padding-bottom: 64px;
+        text-transform: uppercase;
+    }
+    & p {
+        line-height: 25px;
+        color: $text-color;
+        font-weight: 300;
+    }
+}

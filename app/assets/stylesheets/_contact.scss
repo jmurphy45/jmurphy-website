@@ -1,0 +1,48 @@
+/*----------------------------------------*/
+/*  9.  Contact Area
+/*----------------------------------------*/
+.contact-area {}
+/*Contact Map*/
+#contact-map {
+    box-shadow: 0 0 10px rgba(#000, 0.15);
+    height: 280px;
+    margin-left: -30px;
+    width: 100%;
+    @media #{$tablet-device}{
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+    @media #{$large-mobile}{
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+}
+/*Contact Form*/
+.contact-form {}
+/*Contact Info*/
+.contact-info {
+    margin-top: 48px;
+    & .single {
+        float: left;
+        margin-right: 50px;
+        @media #{$small-mobile}{
+            &:nth-child(1) {
+                margin-bottom: 15px;
+            }
+        }
+        & storng {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $text-color;
+            line-height: 10px;
+            display: block;
+            margin-bottom: 9px;
+        }
+        & p {
+            font-size: 15px;
+            color: $text-color-light;
+            line-height: 18px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @experience.company %>
+</p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @experience.job %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @experience.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @experience.end_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @experience.description %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @experience.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @experience.state %>
+</p>
+
+<%= link_to 'Edit', edit_experience_path(@experience) %> |
+<%= link_to 'Back', experiences_path %>

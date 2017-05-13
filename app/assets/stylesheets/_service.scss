@@ -1,0 +1,113 @@
+/*----------------------------------------*/
+/*  5.  Service Area
+/*----------------------------------------*/
+.service-area{}
+/*-- Service List --*/
+.service-tab-list {
+    background-image: url("img/service-list-line.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 4px 0;
+    float: left;
+    width: 100%;
+    @media #{$desktop-device}{
+        background-image: none;
+    }
+    @media #{$tablet-device}{
+        background-image: none;
+    }
+    @media #{$large-mobile}{
+        background-image: none;
+        margin-bottom: 60px;
+    }
+    & li {
+        display: block;
+        float: left;
+        width: 20%;
+        @media #{$large-mobile}{
+            display: inline-block;
+            float: none;
+            width: auto;
+            margin: 0 10px 10px;
+            text-align: center;
+            & a {
+                margin: 0 !important;
+            }
+        }
+        
+        
+        &:nth-child(1) {
+            text-align: left;
+        }
+        &:nth-child(2) {
+            & a {
+                margin-left: -35px;
+            }
+        }
+        &:nth-child(3) {}
+        &:nth-child(4) {
+            & a {
+                margin-right: -50px;
+            }
+        }
+        &:nth-child(5) {
+            text-align: right;
+        }
+        & a {
+            width: 102px;
+            height: 102px;
+            background-color: $color-white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(#000, 0.05);
+            padding: 25px 0;
+            text-align: center;
+            & i {
+                display: block;
+                font-size: 22px;
+                line-height: 24px;
+                color: $text-color-light;
+                margin-bottom: 6px;
+            }
+            & span {
+                display: block;
+                font-size: 14px;
+                color: $text-color;
+                line-height: 18px;
+                text-transform: uppercase;
+            }
+        }
+        &.active a {
+            box-shadow: 0 0 15px rgba(#000, 0.15);
+            & i {
+                color: $theme-color;
+            }
+            & span {
+                color: $theme-color;
+            }
+        }
+    }
+}
+/*-- Service Tab Content --*/
+.service-tab-content {
+    padding: 0 150px;
+    float: left;
+    width: 100%;
+    @media #{$desktop-device}{
+        padding: 0 75px;
+    }
+    @media #{$tablet-device}{
+        padding: 0 40px;
+    }
+    @media #{$large-mobile}{
+        padding: 0;
+    }
+}
+/*-- Service Pane --*/
+.service-pane {
+    & p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 26px;
+        color: $text-color-light;
+    }
+}

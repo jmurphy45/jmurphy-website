@@ -1,0 +1,43 @@
+/*----------------------------------------*/
+/*  10.  Footer Area
+/*----------------------------------------*/
+.footer-area {
+    padding: 13px 0 3px;
+    @media #{$large-mobile}{
+        padding: 23px 0 13px;
+    }
+    & .copyright {
+        & p {
+            display: block;
+            line-height: 24px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            font-weight: 300;
+            color: $text-color-light;
+            @media #{$large-mobile}{
+                text-align: center;
+            }
+        }
+    }
+    & .author-credit {
+        & p {
+            display: block;
+            line-height: 24px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            font-weight: 300;
+            color: $text-color-light;
+            @media #{$large-mobile}{
+                text-align: center;
+            }
+            & a {
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+            & i {
+                color: $text-color-light;
+            }
+        }
+    }
+}

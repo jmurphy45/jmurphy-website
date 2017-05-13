@@ -1,0 +1,53 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+/*-----------------------------------------------------------------------------------
+
+    Template Name: AJ - Personal Portfolio HTML Template
+    Template URI: http://devitems.com/html/aj/index.html
+    Description: AJ - Personal Portfolio HTML Template
+    Author: Hastech Creative
+    Author URI: http://devitems.com/
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    1.   Theme Default CSS
+    2.   Header Area
+	3.   Hero Area
+	4.   About Area
+	5.   Service Area
+	6.   Work Area
+	7.   Testimonial Area
+	8.   Blog Area
+	9.   Contact Area
+	10.   Footer Area
+
+-----------------------------------------------------------------------------------*/
+@import 'bootstrap';
+@import 'variabls';
+@import 'mixins';
+@import 'common';
+@import 'default';
+@import 'header';
+@import 'hero-area';
+@import 'about';
+@import 'service';
+@import 'work';
+@import 'testimonial';
+@import 'blog';
+@import 'contact';
+@import 'footer';

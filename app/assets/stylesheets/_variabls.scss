@@ -1,0 +1,21 @@
+// Font Family
+$font-montserrat: Montserrat;
+
+// Colors
+
+//Theme Color
+$theme-color: #433a8b;
+//Heading Color
+$heading-color: #4d4d4d;
+//Text Color
+$color-white: #fff;
+$text-color: #707070;
+//Text Color Light
+$text-color-light: #858585;
+//Responsive Variables
+$laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$desktop-device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$large-mobile:'only screen and (max-width: 767px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+
