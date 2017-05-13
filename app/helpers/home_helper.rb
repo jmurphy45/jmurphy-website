@@ -1,4 +1,4 @@
-)require 'open-uri'
+require 'open-uri'
 module HomeHelper
   def gihub_contributions
     num = 0

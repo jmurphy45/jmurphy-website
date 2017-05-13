@@ -37,26 +37,18 @@ menuItem.on('click', function(){
     menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
 })
 /*--
-	One Page Menu
------------------------------------*/
-var TopOffsetId = sticky.height() - -10;
-$('.main-menu nav').onePageNav({
-	currentClass: 'active',
-	scrollThreshold: 0.2,
-	scrollSpeed: 1000,
-	scrollOffset: TopOffsetId,
-});
+
 /*--
 	Testimonial Slider
 -----------------------------------*/
-$('.testimonial-slider').slick({
-    arrows: false,
-    autoplay: false,
-    dots: true,
-    fade: true,
-    infinite: true,
-    slidesToShow: 1,
-});
+// $('.testimonial-slider').slick({
+//     arrows: false,
+//     autoplay: false,
+//     dots: true,
+//     fade: true,
+//     infinite: true,
+//     slidesToShow: 1,
+// });
 /*--
 	Isotop with ImagesLoaded
 -----------------------------------*/
