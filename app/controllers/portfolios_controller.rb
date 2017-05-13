@@ -15,6 +15,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/new
   def new
     @portfolio = Portfolio.new
+    @uploader = AvatarUploader.new
   end
 
   # GET /portfolios/1/edit
