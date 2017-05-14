@@ -1,14 +1,14 @@
 <!--Preloader-->
-<!--<div id="loading" class="preloader">-->
-  <!--<div class="loading-center">-->
-    <!--<div class="loading-center-absolute">-->
-      <!--<div class="object object_one"></div>-->
-      <!--<div class="object object_two"></div>-->
-      <!--<div class="object object_three"></div>-->
-      <!--<div class="object object_four"></div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
+<div id="loading" class="preloader">
+  <div class="loading-center">
+    <div class="loading-center-absolute">
+      <div class="object object_one"></div>
+      <div class="object object_two"></div>
+      <div class="object object_three"></div>
+      <div class="object object_four"></div>
+    </div>
+  </div>
+</div>
 <!-- Body main wrapper start -->
 <div class="wrapper fix">
 
@@ -19,7 +19,7 @@
         <div class="col-xs-12">
 
           <!-- Logo -->
-          <a href="index.html" class="logo float-left"><img src="img/logo.png" alt="logo"></a>
+          <a href="index.html" class="logo float-left"> <%= image_tag asset_path 'logo.png' %></a>
 
           <!-- Menu Tottle -->
           <button class="menu-open float-right"><i class="icon_ul"></i></button>
@@ -72,7 +72,7 @@
         <div class="hero-wrapper col-xs-12">
 
           <!-- Hero Image -->
-          <div class="image float-left"><img src="img/hero-image.png" alt="hero image"></div>
+          <div class="image float-left"><%= image_tag asset_path 'hero-image.png' %></div>
 
           <!-- Hero Content -->
           <div class="content float-left">
@@ -82,8 +82,9 @@
 
             <!-- Work Sample -->
             <div class="work-sample float-left">
-              <a href="work-details.html" class="sample"><img src="img/work/sample-1.jpg" alt=""></a>
-              <a href="work-details.html" class="sample"><img src="img/work/sample-2.jpg" alt=""></a>
+              <% @works_recent.each do |work| %>
+                  <a href="work-details.html" class="sample"><%= image_tag work.square %></a>
+              <% end %>
               <a href="#work-area" data-scroll class="more-work">latest <span>work <i class="arrow_right"></i></span></a>
             </div>
 

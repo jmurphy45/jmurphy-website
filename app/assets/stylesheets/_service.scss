@@ -4,7 +4,7 @@
 .service-area{}
 /*-- Service List --*/
 .service-tab-list {
-    background-image: url("img/service-list-line.png");
+    background-image: url(asset_path("service-list-line.png"));
     background-repeat: no-repeat;
     background-position: center center;
     padding: 4px 0;

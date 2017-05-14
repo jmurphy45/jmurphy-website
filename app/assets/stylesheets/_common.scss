@@ -2,7 +2,7 @@
 /*  1.  Theme default CSS
 /*----------------------------------------*/
 /*-- Font Family --*/
-@import url("css/montserrat.css");
+@import "css/montserrat";
 /*-- Common Style --*/
 body{
     line-height: 24px;
@@ -138,7 +138,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 /*-- Pattern Background --*/
 .bg-pattern {
-  background-image: url("img/bg/pattern.jpg");
+  background-image: url(asset_path("bg/pattern.jpg"));
   background-repeat: repeat;
 }
 /*-- Scroll Up --*/
