@@ -82,8 +82,10 @@
 
             <!-- Work Sample -->
             <div class="work-sample float-left">
-              <% @works_recent.each do |work| %>
-                  <a href="work-details.html" class="sample"><%= image_tag work.square %></a>
+              <% if !@works_recent.blank? %>
+                  <% @works_recent.each do |work| %>
+                      <a href="work-details.html" class="sample"><%= image_tag work.square %></a>
+                  <% end %>
               <% end %>
               <a href="#work-area" data-scroll class="more-work">latest <span>work <i class="arrow_right"></i></span></a>
             </div>
@@ -268,6 +270,7 @@
 
         <!-- Work Grid -->
         <div class="works-grid">
+          <% if !@works.blank? %>
               <% num = 1 %>
              <% @works.each do |work| %>
               <% if num == 1 || num == 6 %>
@@ -297,6 +300,7 @@
                   </div>
               <% end  %>
           <% end %>
+              <% end %>
 
         </div>
 
@@ -320,6 +324,7 @@
       <div class="row">
 
         <div class="blog-wrapper">
+          <% if !@blogs.blank? %>
           <% @blogs.each do |blog| %>
               <!-- Blog Item -->
               <div class="col-md-6 col-xs-12 mb-30">
@@ -331,6 +336,7 @@
                 </div>
               </div>
           <% end %>
+              <% end %>
 
         </div>
 
