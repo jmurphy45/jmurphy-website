@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="input-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :portfolio_name %>
+    <%= form.text_field :name, id: :portfolio_name,class: 'form-control' %>
   </div>
 
   <div class="field">
@@ -30,6 +30,23 @@
     <%= form.label :about %>
     <%= form.text_area :about, id: :portfolio_about %>
   </div>
+
+
+    <div class="field">
+      <%= form.label :square %><br>
+      <%= form.file_field :square %>
+    </div>
+
+
+    <div class="field">
+      <%= form.label :long_potrait %><br>
+      <%= form.file_field :long_potrait %>
+    </div>
+
+    <div class="field">
+    <%= form.label :long_landscape %><br>
+    <%= form.file_field :long_landscape %>
+    </div>
 
   <div class="actions">
     <%= form.submit %>

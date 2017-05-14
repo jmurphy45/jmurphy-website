@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :feedbacks
   resources :skills
   resources :categories
   resources :portfolios

@@ -5,6 +5,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios.json
   def index
     @portfolios = Portfolio.all
+    @uploader = PortfolioUploader.new
   end
 
   # GET /portfolios/1
@@ -15,7 +16,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/new
   def new
     @portfolio = Portfolio.new
-    @uploader = AvatarUploader.new
+    @uploader = PortfolioUploader.new
   end
 
   # GET /portfolios/1/edit
@@ -70,6 +71,6 @@ class PortfoliosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
-      params.require(:portfolio).permit(:name, :client, :completed, :about)
+      params.require(:portfolio).permit(:name, :client, :completed, :about,:square,:long_potrait,:long_landscape)
     end
 end

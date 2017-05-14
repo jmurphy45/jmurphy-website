@@ -267,78 +267,35 @@
 
         <!-- Work Grid -->
         <div class="works-grid">
-
-          <!--Work Item-->
-          <div class="works-item web development col-md-3 col-sm-4 col-xs-12">
-            <a href="work-details.html">
-              <%= image_tag("/img/1.jpg") %>
-              <h5>Portfolio Title</h5>
-            </a>
-          </div>
-
-          <!--Work Item-->
-          <div class="works-item brand design col-md-3 col-sm-4 col-xs-12">
-            <a href="work-details.html">
-              <%= image_tag("/img/2.jpg") %>
-              <h5>Portfolio Title</h5>
-            </a>
-          </div>
-
-          <!--Work Item-->
-          <div class="works-item development web col-md-3 col-sm-4 col-xs-12">
-            <a href="work-details.html">
-              <%= image_tag("/img/2.jpg") %>
-              <h5>Portfolio Title</h5>
-            </a>
-          </div>
-
-          <!--Work Item-->
-          <div class="works-item brand web col-md-3 col-sm-4 col-xs-12">
-            <a href="work-details.html">
-              <%= image_tag("/img/2.jpg") %>
-              <h5>Portfolio Title</h5>
-            </a>
-          </div>
-
-          <!--Work Item-->
-          <div class="works-item design brand col-md-6 col-sm-8 col-xs-12">
-            <a href="work-details.html">
-              <%= image_tag("/img/5.jpg") %>
-              <h5>Portfolio Title</h5>
-            </a>
-          </div>
-
-          <!--Work Item-->
-          <div class="works-item web design col-md-3 col-sm-4 col-xs-12">
-            <a href="work-details.html">
-              <%= image_tag("/img/1.jpg") %>
-              <h5>Portfolio Title</h5>
-            </a>
-          </div>
-
-          <!--Work Item-->
-          <div class="works-item brand development col-md-3 col-sm-4 col-xs-12">
-            <a href="work-details.html">
-              <%= image_tag("/img/2.jpg") %>
-              <h5>Portfolio Title</h5>
-            </a>
-          </div>
-
-          <!--Work Item-->
-          <div class="works-item design brand col-md-3 col-sm-4 col-xs-12">
-            <a href="work-details.html">
-              <%= image_tag("/img/2.jpg") %>
-              <h5>Portfolio Title</h5>
-            </a>
-          </div>
-
-          <!--Work Item-->
-          <div class="works-item design development col-md-3 col-sm-4 col-xs-12">
-            <a href="work-details.html">
-              <%= image_tag("/img/2.jpg") %>
-              <h5>Portfolio Title</h5>
-            </a>
-          </div>
+              <% num = 1 %>
+             <% @works.each do |work| %>
+              <% if num == 1 || num == 6 %>
+                  <% num += 1 %>
+                  <div class="works-item web development col-md-3 col-sm-4 col-xs-12">
+                    <a href="work-details.html">
+                      <%= image_tag work.long_potrait %>
+                      <h5><%= work.name %></h5>
+                    </a>
+                  </div>
+              <% elsif num == 2 || num == 3 || num == 4 || num == 7 || num == 8 || num == 9 %>
+                  <% num += 1 %>
+                  <div class="works-item  col-md-3 col-sm-4 col-xs-12">
+                    <a href="work-details.html">
+                      <%= image_tag work.square %>
+                      <h5><%= work.name %></h5>
+                    </a>
+                  </div>
+              <% elsif num == 5 %>
+                  <% num += 1 %>
+                  <!--Work Item-->
+                  <div class="works-item col-md-6 col-sm-8 col-xs-12">
+                    <a href="work-details.html">
+                      <%= image_tag work.long_landscape %>
+                      <h5><%= work.name %></h5>
+                    </a>
+                  </div>
+              <% end  %>
+          <% end %>
 
         </div>
 
@@ -347,43 +304,7 @@
   </div>
   <!-- Work Area End -->
 
-  <!-- Testimonial Area Start -->
-  <div id="testimonial-area" class="testimonial-area bg-pattern pb-100 pt-100">
-    <div class="container">
-      <div class="row">
 
-        <div class="col-md-8 col-md-offset-2 col-xs-12">
-
-          <!-- Testimonial Slider Start -->
-          <div class="testimonial-slider text-center">
-
-            <!-- Single Testimonial -->
-            <div class="testimonial-item">
-              <h3>Marie Keller</h3>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mor</p>
-            </div>
-
-            <!-- Single Testimonial -->
-            <div class="testimonial-item">
-              <h3>Jhon Doe</h3>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mor</p>
-            </div>
-
-            <!-- Single Testimonial -->
-            <div class="testimonial-item">
-              <h3>Jane Doe</h3>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the mor</p>
-            </div>
-
-          </div>
-          <!-- Testimonial Slider End -->
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- Testimonial Area End -->
 
   <!-- Blog Area Start -->
   <div id="blog-area" class="blog-area pb-70 pt-100">
@@ -398,26 +319,17 @@
       <div class="row">
 
         <div class="blog-wrapper">
-
-          <!-- Blog Item -->
-          <div class="col-md-6 col-xs-12 mb-30">
-            <div class="blog-item text-left">
-              <h4 class="title"><a href="blog-details.html">Including versions of Lorem Ipsum</a></h4>
-              <span class="date">Date:07 oct 16</span>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply m text.It has roots in a piece of classical Latinaking.</p>
-              <a href="blog-details.html" class="read-more">READ MORE</a>
-            </div>
-          </div>
-
-          <!-- Blog Item -->
-          <div class="col-md-6 col-xs-12 mb-30">
-            <div class="blog-item text-left">
-              <h4 class="title"><a href="blog-details.html">Many desktop publishing packages and</a></h4>
-              <span class="date">Date:07 oct 16</span>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply m text.It has roots in a piece of classical Latinaking.</p>
-              <a href="blog-details.html" class="read-more">READ MORE</a>
-            </div>
-          </div>
+          <% @blogs.each do |blog| %>
+              <!-- Blog Item -->
+              <div class="col-md-6 col-xs-12 mb-30">
+                <div class="blog-item text-left">
+                  <h4 class="title"><a href="blog-details.html"><%= blog.title %></a></h4>
+                  <span class="date">Date:07 oct 16</span>
+                  <p><%= blog.body %></p>
+                  <a href="blog-details.html" class="read-more">READ MORE</a>
+                </div>
+              </div>
+          <% end %>
 
         </div>
 
@@ -448,14 +360,7 @@
 
           <!-- Contact Form -->
           <div class="contact-form text-left fix">
-            <form id="contact-form" action="mail.php" method="post">
-              <div class="input-box-2">
-                <div class="input-box"><input name="name" type="text" placeholder="Your Name"></div>
-                <div class="input-box"><input name="email" type="text" placeholder="Your Email"></div>
-              </div>
-              <div class="input-box"><textarea name="message" placeholder="Your Message"></textarea></div>
-              <div class="input-box"><input type="submit" value="submit"></div>
-            </form>
+            <%= render 'feedbacks/form', feedback: @feedback %>
             <p class="form-messege"></p>
           </div>
 
@@ -463,11 +368,11 @@
           <div class="contact-info text-left fix">
             <div class="single">
               <storng>Phone :</storng>
-              <p>+989 658 6585</p>
+              <p>901 000-0000</p>
             </div>
             <div class="single">
               <storng>Email :</storng>
-              <p>ajinfo@gmail.com</p>
+              <p>contact@jmurphy.us</p>
             </div>
           </div>
 
@@ -486,12 +391,12 @@
 
         <!-- Copyright -->
         <div class="copyright text-left col-sm-6 col-xs-12">
-          <p>Copyright &copy; AJ 2016.All right reserved.</p>
+          <p>Copyright &copy; Joseph Murphy 2016.All right reserved.</p>
         </div>
 
         <!-- Author Credit -->
         <div class="author-credit text-right col-sm-6 col-xs-12">
-          <p>Created by <a href="http://devitems.com/">Devitems</a> With <i class="icon_heart_alt"></i></p>
+          <p></p>
         </div>
 
       </div>

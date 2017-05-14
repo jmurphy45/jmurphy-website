@@ -8,7 +8,15 @@
   </head>
 
   <body>
-    <%= yield %>
+  <% if current_page?('/') %>
+          <%= yield %>
+  <% else %>
+      <div class="container">
+        <div class="row">
+          <%= yield %>
+        </div>
+      </div>
+  <% end %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

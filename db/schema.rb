@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170513221123) do
+ActiveRecord::Schema.define(version: 20170514031938) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(version: 20170513221123) do
     t.text "description"
     t.string "city"
     t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
