@@ -30,7 +30,10 @@
     <%= form.label :about %>
     <%= form.text_area :about, id: :portfolio_about %>
   </div>
-
+    <div class="field">
+      <%= form.label :categoy %>
+      <%= form.collection_select :name, Category.all, :id, :name, :prompt => "Select category" %>
+    </div>
 
     <div class="field">
       <%= form.label :square %><br>

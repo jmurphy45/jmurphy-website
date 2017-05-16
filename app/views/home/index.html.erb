@@ -245,9 +245,9 @@
 
           <!-- Service Tabs List -->
           <ul class="service-tab-list text-center mb-70">
-            <li><a href="#ser-photo" data-toggle="tab"><i class="icon_camera_alt"></i><span>Think</span></a></li>
+            <li class="active"><a href="#ser-photo" data-toggle="tab"><i class="icon_camera_alt"></i><span>Think</span></a></li>
             <li><a href="#ser-product" data-toggle="tab"><i class="icon_heart_alt"></i><span>Design</span></a></li>
-            <li class="active"><a href="#ser-idea" data-toggle="tab"><i class="icon_lightbulb_alt"></i><span>Create</span></a></li>
+            <li class=""><a href="#ser-idea" data-toggle="tab"><i class="icon_lightbulb_alt"></i><span>Create</span></a></li>
             <li><a href="#ser-design" data-toggle="tab"><i class="icon_heart_alt"></i><span>Iterate</span></a></li>
             <li><a href="#ser-develop" data-toggle="tab"><i class="icon_cog"></i><span>Deliver</span></a></li>
           </ul>
@@ -309,6 +309,9 @@
           <button data-filter=".development">development</button>
           <button data-filter=".brand">brand</button>
         </div>
+        <% @categories.each do |cat| %>
+            <p><%= cat %></p>
+        <% end %>
 
         <!-- Work Grid -->
         <div class="works-grid">
