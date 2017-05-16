@@ -1,9 +1,10 @@
 	function initialize() {
 	var mapOptions = {
-		zoom: 11,
+		zoom: 15,
 		scrollwheel: false,
-		center: new google.maps.LatLng(40.061681, -75.167041)
+		center: new google.maps.LatLng(35.116822, -89.943952)
 	};
+
 	var map = new google.maps.Map(document.getElementById('contact-map'),
 		  mapOptions);
 	var marker = new google.maps.Marker({

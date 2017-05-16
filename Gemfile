@@ -60,3 +60,4 @@ gem 'mini_magick', '~> 4.3'
 gem 'jquery-rails'
 gem "fog-aws"
 gem "carrierwave-aws"
+gem "annotate"

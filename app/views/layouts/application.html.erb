@@ -8,15 +8,17 @@
   </head>
 
   <body>
-  <% if current_page?('/') %>
+  <% #if current_page?('/') || @portfolio
+  if false%>
           <%= yield %>
   <% else %>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <%= yield %>
         </div>
       </div>
   <% end %>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdWLY_Y6FL7QGW5vcO3zajUEsrKfQPNzI"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
