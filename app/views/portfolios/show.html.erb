@@ -1,19 +1,4 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @portfolio.name %>
-</p>
-
-<p>
-  <strong>Client:</strong>
-  <%= @portfolio.client %>
-</p>
-
-<p>
-  <strong>Completed:</strong>
-  <%= @portfolio.completed %>
-</p>
 
 
 
@@ -90,10 +75,10 @@
         <!-- Hero Wrapper Start -->
         <div class="page-banner col-xs-12">
 
-          <h2>Work Details</h2>
+          <h2><%= @portfolio.name %></h2>
           <ul class="breadcrumb">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Work Details</a></li>
+            <li><a href="#"><%= @portfolio.name %></a></li>
           </ul>
 
         </div>
@@ -109,7 +94,7 @@
     <div class="container">
 
       <div class="row">
-        <div class="work-image col-xs-12"><img src="img/work/single.jpg" alt=""></div>
+        <div class="work-image col-xs-12"><%= image_tag @portfolio.cover %></div>
       </div>
 
       <div class="row pt-50">
@@ -119,7 +104,7 @@
             <li><i class="icon_profile"></i><span>Created by:</span>Yeasin Hossain</li>
             <li><i class="icon_calendar"></i><span>Completed on:</span> <%= @portfolio.completed %></li>
             <li><i class="icon_piechart"></i><span>Skills:</span>HTML5 / WP / CSS3</li>
-            <li><i class="icon_link"></i><span>Client: </span><a href="#">HasTech</a></li>
+            <li><i class="icon_link"></i><span>Client: </span><a href="#"><%= @portfolio.client %></a></li>
             <li><i class="icon_link"></i><span>Category: </span><a href="#">WordPress</a></li>
           </ul>
         </div>
