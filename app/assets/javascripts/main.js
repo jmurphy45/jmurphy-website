@@ -134,5 +134,6 @@ $.scrollUp({
 	scrollText: '<i class="arrow_carrot-up"></i>',
 });
  
-
+//git-cal
+GitHubCalendar(".calendar", "jmurphy45");
 })(jQuery);	
