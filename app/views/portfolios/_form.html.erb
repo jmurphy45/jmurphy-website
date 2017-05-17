@@ -31,8 +31,9 @@
     <%= form.text_area :about, id: :portfolio_about %>
   </div>
     <div class="field">
-      <%= form.label :categoy %>
-      <%= form.collection_select :name, Category.all, :id, :name, :prompt => "Select category" %>
+      <%= form.label :category %>
+
+      <%= form.select :category_id, options_from_collection_for_select(@cat,'id','name',@test)%>
     </div>
 
     <div class="field">

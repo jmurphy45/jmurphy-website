@@ -17,17 +17,22 @@ class PortfoliosController < ApplicationController
   def new
     @portfolio = Portfolio.new
     @uploader = PortfolioUploader.new
+    @cat = Category.all
   end
 
   # GET /portfolios/1/edit
   def edit
+    @cat = Category.all
+    @test = Portfolio.find(params[:id]).category_id
   end
 
   # POST /portfolios
   # POST /portfolios.json
   def create
     @portfolio = Portfolio.new(portfolio_params)
-
+    @test = params[:portfolio][:category_id]
+    @portfolio.category_id = params[:portfolio][:category_id]
+    #byebug
     respond_to do |format|
       if @portfolio.save
         format.html { redirect_to @portfolio, notice: 'Portfolio was successfully created.' }
@@ -71,6 +76,6 @@ class PortfoliosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
-      params.require(:portfolio).permit(:name, :client, :completed, :about,:square,:long_potrait,:long_landscape, :cover)
+      params.require(:portfolio).permit(:name, :client, :completed, :about,:square,:long_potrait,:long_landscape, :cover, :category_id)
     end
 end

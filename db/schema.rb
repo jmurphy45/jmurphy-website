@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170516004819) do
+ActiveRecord::Schema.define(version: 20170516234350) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -52,12 +52,12 @@ ActiveRecord::Schema.define(version: 20170516004819) do
     t.text "about"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id"
     t.integer "skill_id"
     t.string "long_landscape"
     t.string "long_potrait"
     t.string "square"
     t.string "cover"
+    t.integer "category_id"
     t.index ["category_id"], name: "index_portfolios_on_category_id"
     t.index ["skill_id"], name: "index_portfolios_on_skill_id"
   end
