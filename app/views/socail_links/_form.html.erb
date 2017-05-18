@@ -1,0 +1,27 @@
+<%= form_with(model: socail_link, local: true) do |form| %>
+  <% if socail_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(socail_link.errors.count, "error") %> prohibited this socail_link from being saved:</h2>
+
+      <ul>
+      <% socail_link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :socail_link_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link, id: :socail_link_link %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

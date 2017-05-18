@@ -27,9 +27,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :end_date %>
-    <%= form.date_select :end_date, id: :experience_end_date %>
-  </div>
+  <%= form.label :end_date %>
+  <%= form.date_select :end_date, id: :experience_end_date %>
+</div>
+    <div class="field">
+      <%= form.label :present %>
+      <%= form.check_box :present %>
+    </div>
 
   <div class="field">
     <%= form.label :description %>

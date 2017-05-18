@@ -3,70 +3,20 @@
 
 
 <!--Preloader-->
-<!--<div id="loading" class="preloader">-->
-  <!--<div class="loading-center">-->
-    <!--<div class="loading-center-absolute">-->
-      <!--<div class="object object_one"></div>-->
-      <!--<div class="object object_two"></div>-->
-      <!--<div class="object object_three"></div>-->
-      <!--<div class="object object_four"></div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
+<div id="loading" class="preloader">
+  <div class="loading-center">
+    <div class="loading-center-absolute">
+      <div class="object object_one"></div>
+      <div class="object object_two"></div>
+      <div class="object object_three"></div>
+      <div class="object object_four"></div>
+    </div>
+  </div>
+</div>
 <!-- Body main wrapper start -->
 <div class="wrapper fix">
 
-  <!-- Header Area Start -->
-  <div id="header-area" class="header-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-
-          <!-- Logo -->
-          <a href="index.html" class="logo float-left"><img src="img/logo.png" alt="logo"></a>
-
-          <!-- Menu Tottle -->
-          <button class="menu-open float-right"><i class="icon_ul"></i></button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Header Area End -->
-
-  <!-- Menu Area Start -->
-  <div id="menu-area" class="menu-area">
-    <div class="main-menu text-center">
-
-      <!-- Menu Close Button -->
-      <button class="menu-close"><i class="icon_close"></i></button>
-
-      <!-- Menu Nav -->
-      <nav>
-        <ul>
-          <li class="active"><a href="#hero-area">home</a></li>
-          <li><a href="#about-area">about</a></li>
-          <li><a href="#service-area">service</a></li>
-          <li><a href="#work-area">work</a></li>
-          <li><a href="#testimonial-area">testimonial</a></li>
-          <li><a href="#blog-area">blog</a></li>
-          <li><a href="#contact-area">contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Social -->
-      <div class="social">
-        <a href="#"><i class="social_facebook"></i></a>
-        <a href="#"><i class="social_twitter"></i></a>
-        <a href="#"><i class="social_linkedin"></i></a>
-        <a href="#"><i class="social_googleplus"></i></a>
-        <a href="#"><i class="social_pinterest"></i></a>
-      </div>
-
-    </div>
-  </div>
-  <!-- Menu Area End -->
-
+  <%= render 'shared/nav' %>
   <!-- Hero Area Start -->
   <div id="page-banner-area" class="page-banner-area bg-pattern pb-100 pt-200">
     <div class="container">
@@ -118,25 +68,7 @@
   </div>
   <!-- Portfolio Details End -->
 
-  <!-- Footer Area Start -->
-  <div class="footer-area">
-    <div class="container">
-      <div class="row">
-
-        <!-- Copyright -->
-        <div class="copyright text-left col-sm-6 col-xs-12">
-          <p>Copyright &copy; AJ 2016.All right reserved.</p>
-        </div>
-
-        <!-- Author Credit -->
-        <div class="author-credit text-right col-sm-6 col-xs-12">
-          <p>Created by <a href="http://devitems.com/">Devitems</a> With <i class="icon_heart_alt"></i></p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- Footer Area End -->
+  <%= render 'shared/footer' %>
 
 </div>
 <!-- Body main wrapper end -->

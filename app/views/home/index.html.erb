@@ -12,56 +12,9 @@
 <!-- Body main wrapper start -->
 <div class="wrapper fix">
 
-  <!-- Header Area Start -->
-  <div id="header-area" class="header-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
 
-          <!-- Logo -->
-          <!--<a href="index.html" class="logo float-left"> <%= image_tag asset_path 'logo.png' %></a>-->
 
-          <!-- Menu Tottle -->
-          <button class="menu-open float-right"><i class="icon_ul"></i></button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Header Area End -->
-
-  <!-- Menu Area Start -->
-  <div id="menu-area" class="menu-area">
-    <div class="main-menu text-center">
-
-      <!-- Menu Close Button -->
-      <button class="menu-close"><i class="icon_close"></i></button>
-
-      <!-- Menu Nav -->
-      <nav>
-        <ul>
-          <li class="active"><a href="#hero-area">home</a></li>
-          <li><a href="#about-area">about</a></li>
-          <li><a href="#service-area">service</a></li>
-          <li><a href="#work-area">work</a></li>
-          <li><a href="#testimonial-area">testimonial</a></li>
-          <li><a href="#blog-area">blog</a></li>
-          <li><a href="#contact-area">contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Social -->
-      <div class="social">
-        <a href="#"><i class="social_facebook"></i></a>
-        <a href="#"><i class="social_twitter"></i></a>
-        <a href="#"><i class="social_linkedin"></i></a>
-        <a href="#"><i class="social_googleplus"></i></a>
-        <a href="#"><i class="social_pinterest"></i></a>
-      </div>
-
-    </div>
-  </div>
-  <!-- Menu Area End -->
+ <%= render 'shared/nav' %>
 
   <!-- Hero Area Start -->
   <div id="hero-area" class="hero-area bg-pattern">
@@ -84,7 +37,7 @@
             <div class="work-sample float-left">
               <% if !@works_recent.blank? %>
                   <% @works_recent.each do |work| %>
-                      <a href="work-details.html" class="sample"><%= image_tag work.square %></a>
+                      <a href="<%= portfolio_path work.id %>" class="sample"><%= image_tag work.square %></a>
                   <% end %>
               <% end %>
               <a href="#work-area" data-scroll class="more-work">latest <span>work <i class="arrow_right"></i></span></a>
@@ -154,25 +107,25 @@
 
               <!-- Single Fatcs -->
               <div class="single-fatcs">
-                <h2 class="counter">78</h2>
-                <p>Commits</p>
+                <h2 class="counter">650</h2>
+                <p>commits</p>
               </div>
 
               <!-- Single Fatcs -->
               <div class="single-fatcs">
-                <h2 class="counter">150</h2>
+                <h2 class="counter">5</h2>
                 <p>Projects</p>
               </div>
 
               <!-- Single Fatcs -->
               <div class="single-fatcs">
-                <h2 class="counter">50</h2>
+                <h2 class="counter">10</h2>
                 <p>Skills</p>
               </div>
 
               <!-- Single Fatcs -->
               <div class="single-fatcs">
-                <h2 class="counter">78</h2>
+                <h2 class="counter">3</h2>
                 <p>Clients</p>
               </div>
 
@@ -181,9 +134,9 @@
           </div>
         </div>
 
-        <div class="col-lg-12 col-md-12 col-md-offset-0 col-xs-12">
+        <div class="col-md-6 col-md-offset-3">
           <div class="row">
-            <div class="calendar">
+            <div class="calendar center-block">
               <!-- Loading stuff -->
               Loading the data just for you.
             </div>
@@ -198,35 +151,45 @@
 
 
   <!-- work Area Start -->
-  <div id="about-area" class="about-area pb-55 pt-100">
+  <div id="exp-area" class="exp-area pb-55 pt-100">
     <div class="container">
 
       <div class="row">
 
         <!-- About Title -->
-        <div class="about-title text-center col-xs-12">
+        <div class="exp-title text-center col-xs-12">
           <h1>What I <span>Do</span></h1>
         </div>
 
+        <div class="col-md-4 col-sm-12">
+          <h2>Expierences</h2>
+        </div>
+        <div class="col-md-7 col-sm-12">
+          <div class="experience">
+            <div class="expr-group">
+              <% @experiences.each do |work| %>
+                  <div class="single-expr">
+                    <h4><%= work.job %></h4>
+                    <p><%= work.company + ', ' + work.city + ', ' + work.state + ', ' %>
+                      <%= generate_date(work.start_date, work.end_date,work.present )  %></p>
+                    <p></p>
+                  </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
 
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-4 col-sm-12">
+          <h2>Education</h2>
+        </div>
+        <div class="col-md-7 col-sm-12">
           <div class="experience">
             <div class="expr-group">
               <div class="single-expr">
-                <h5>Front-end Developer</h5>
-                <p>Pro2 IT Solution Ltd</p>
-                <span>February 2009 - January 2013</span>
+                <h4>Computer Science, Bachelor of Science </h4>
+                <p>University of Memphis, Memphis, TN, August 2012 – May 2017</p>
               </div>
-              <div class="single-expr">
-                <h5>Senior Web Developer</h5>
-                <p>Hastech IT Solution Ltd</p>
-                <span>February 2013 - August 2016</span>
-              </div>
-              <div class="single-expr">
-                <h5>Lead Developer</h5>
-                <p>Themehaven.net</p>
-                <span>September 2016 - Present</span>
-              </div>
+
             </div>
           </div>
         </div>
@@ -381,10 +344,11 @@
               <!-- Blog Item -->
               <div class="col-md-6 col-xs-12 mb-30">
                 <div class="blog-item text-left">
-                  <h4 class="title"><a href="blog-details.html"><%= blog.title %></a></h4>
+                  <h4 class="title"><%= link_to blog.title, blog_path(blog.id) %></h4>
                   <span class="date">Date:07 oct 16</span>
                   <p><%= blog.body %></p>
-                  <a href="blog-details.html" class="read-more">READ MORE</a>
+
+                  <a href="<%= blog_url(blog.id) %>" class="read-more">READ MORE</a>
                 </div>
               </div>
           <% end %>
@@ -443,25 +407,7 @@
   </div>
   <!-- Contact Area End -->
 
-  <!-- Footer Area Start -->
-  <div class="footer-area">
-    <div class="container">
-      <div class="row">
-
-        <!-- Copyright -->
-        <div class="copyright text-left col-sm-6 col-xs-12">
-          <p>Copyright &copy; Joseph Murphy 2016.All right reserved.</p>
-        </div>
-
-        <!-- Author Credit -->
-        <div class="author-credit text-right col-sm-6 col-xs-12">
-          <p></p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- Footer Area End -->
+<%= render 'shared/footer' %>
 
 </div>
 <!-- Body main wrapper end -->

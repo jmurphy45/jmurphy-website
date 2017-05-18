@@ -61,3 +61,4 @@ gem 'jquery-rails'
 gem "fog-aws"
 gem "carrierwave-aws"
 gem "annotate"
+gem 'devise'

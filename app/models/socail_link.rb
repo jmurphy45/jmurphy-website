@@ -1,0 +1,2 @@
+class SocailLink < ApplicationRecord
+end

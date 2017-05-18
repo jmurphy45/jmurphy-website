@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Socail Links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @socail_links.each do |socail_link| %>
+      <tr>
+        <td><%= socail_link.name %></td>
+        <td><%= socail_link.link %></td>
+        <td><%= link_to 'Show', socail_link %></td>
+        <td><%= link_to 'Edit', edit_socail_link_path(socail_link) %></td>
+        <td><%= link_to 'Destroy', socail_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Socail Link', new_socail_link_path %>

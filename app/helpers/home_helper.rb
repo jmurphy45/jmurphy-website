@@ -1,14 +1,19 @@
-require 'open-uri'
+
 module HomeHelper
   def gihub_contributions
-    num = 0
-    repos = open('https://api.github.com/users/jmurphy45/repos')
-    #/repos/:owner/:repo/stats/commit_activity
-    JSON.parse(repos).each do |r|
-      #repo = open('/repos/jmurphy45/'+ r.name +'/stats/commit_activity')
-      JSON.parse(repos).each do |repo|
 
-      end
+  end
+
+  def generate_date(start, finish, present = false )
+    if present
+      return start.strftime("%B %Y") + ' - present'
+    else
+      return start.strftime("%B %Y") + ' - ' + finish.strftime("%B %Y")
     end
+  end
+
+  def github_repos
+
+
   end
 end

@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     @works = Portfolio.last(9)
     @blogs = Blog.last(2)
     @categories = Portfolio.select('distinct(category_id)')
+    @experiences = Experience.all
 
     @feedback = Feedback.new
   end
