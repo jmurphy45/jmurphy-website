@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518030956) do
+ActiveRecord::Schema.define(version: 20170519151418) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -66,6 +66,15 @@ ActiveRecord::Schema.define(version: 20170518030956) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "portfolio_skills", force: :cascade do |t|
+    t.integer "portfolio_id"
+    t.integer "skill_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["portfolio_id"], name: "index_portfolio_skills_on_portfolio_id"
+    t.index ["skill_id"], name: "index_portfolio_skills_on_skill_id"
+  end
+
   create_table "portfolios", force: :cascade do |t|
     t.string "name"
     t.string "client"
@@ -90,6 +99,21 @@ ActiveRecord::Schema.define(version: 20170518030956) do
   create_table "socail_links", force: :cascade do |t|
     t.string "name"
     t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer "blog_id"
+    t.integer "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_id"], name: "index_taggings_on_blog_id"
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

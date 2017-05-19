@@ -22,5 +22,26 @@ class Portfolio < ApplicationRecord
   mount_uploader :long_potrait, PortfolioUploader
   mount_uploader :long_landscape, PortfolioUploader
   mount_uploader :cover, PortfolioUploader
-  has_one :category
+
+  belongs_to :category
+
+  has_many :portfolio_skills,:dependent => :destroy
+  has_many :skills, through: :portfolio_skills
+
+
+  def all_tags=(names)
+    self.skills = names.split(",").map do |name|
+      Skill.where(name: name.strip).first_or_create!
+    end
+  end
+
+  def all_tags
+    self.skills.map(&:name).join(", ")
+  end
+
+  def remove_skill_tags
+    PortfolioSkill.where(portfolio_id: id).destroy_all
+  end
+
+
 end

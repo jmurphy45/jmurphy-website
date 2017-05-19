@@ -68,19 +68,22 @@
               <!-- Blog Details Tags -->
               <div class="blog-tags float-left">
                 <p>tags:</p>
-                <a href="#">design,</a>
-                <a href="#">photoshop,</a>
-                <a href="#">web design,</a>
-                <a href="#">print</a>
+                <% @tags.each do |tag| %>
+                  <a><%= tag.tag.name + ',' %></a>
+                <% end %>
+                <!--<a href="#">design,</a>-->
+                <!--<a href="#">photoshop,</a>-->
+                <!--<a href="#">web design,</a>-->
+                <!--<a href="#">print</a>-->
               </div>
 
               <!-- Blog Details Share -->
               <div class="blog-share float-right">
-                <p>share:</p>
-                <a href="#"><i class="social_facebook"></i></a>
-                <a href="#"><i class="social_twitter"></i></a>
-                <a href="#"><i class="social_googleplus"></i></a>
-                <a href="#"><i class="social_instagram"></i></a>
+                <!--<p>share:</p>-->
+                <!--<a href="https://www.facebook.com/sharer/sharer.php?u=#<%= request.original_url %>"><i class="social_facebook"></i></a>-->
+                <!--<a href="#"><i class="social_twitter"></i></a>-->
+                <!--<a href="#"><i class="social_googleplus"></i></a>-->
+                <!--<a href="#"><i class="social_instagram"></i></a>-->
               </div>
 
             </div>

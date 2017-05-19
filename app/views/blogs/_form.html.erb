@@ -21,6 +21,10 @@
     <%= form.text_area :body, id: :blog_body %>
   </div>
 
+    <div class="field">
+      <%= form.text_field :all_tags, placeholder: "Tags separated with comma" %>
+    </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

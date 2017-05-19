@@ -35,6 +35,9 @@
 
       <%= form.select :category_id, options_from_collection_for_select(@cat,'id','name',@test)%>
     </div>
+    <div class="large-10 large-centered columns">
+      <%= form.text_field :all_tags, placeholder: "Tags separated with comma" %>
+    </div>
 
     <div class="field">
       <%= form.label :square %><br>

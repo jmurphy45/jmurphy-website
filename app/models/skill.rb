@@ -9,4 +9,9 @@
 #
 
 class Skill < ApplicationRecord
+
+  has_many :portfolio_skills
+  has_many :portfolios, through: :portfolio_skills
+
+
 end
