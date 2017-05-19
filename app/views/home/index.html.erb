@@ -291,7 +291,7 @@
               <% if num == 1 || num == 6 %>
                   <% num += 1 %>
                   <div class="works-item web development col-md-3 col-sm-4 col-xs-12">
-                    <a href="<%= portfolio_path work.id %>">
+                    <a href="<%= public_portfolio_path work.id %>">
                       <%= image_tag work.long_potrait %>
                       <h5><%= work.name %></h5>
                     </a>
@@ -299,7 +299,7 @@
               <% elsif num == 2 || num == 3 || num == 4 || num == 7 || num == 8 || num == 9 %>
                   <% num += 1 %>
                   <div class="works-item  col-md-3 col-sm-4 col-xs-12">
-                    <a href="<%= portfolio_path work.id %>">
+                    <a href="<%= public_portfolio_path work.id %>">
                       <%= image_tag work.square %>
                       <h5><%= work.name %></h5>
                     </a>
@@ -308,7 +308,7 @@
                   <% num += 1 %>
                   <!--Work Item-->
                   <div class="works-item col-md-6 col-sm-8 col-xs-12">
-                    <a href="<%= portfolio_path work.id %>">
+                    <a href="<%= public_portfolio_path work.id %>">
                       <%= image_tag work.long_landscape %>
                       <h5><%= work.name %></h5>
                     </a>
@@ -344,11 +344,11 @@
               <!-- Blog Item -->
               <div class="col-md-6 col-xs-12 mb-30">
                 <div class="blog-item text-left">
-                  <h4 class="title"><%= link_to blog.title, blog_path(blog.id) %></h4>
+                  <h4 class="title"><%= link_to blog.title, public_blog_path(blog.id) %></h4>
                   <span class="date">Date:07 oct 16</span>
                   <p><%= blog.body %></p>
 
-                  <a href="<%= blog_url(blog.id) %>" class="read-more">READ MORE</a>
+                  <a href="<%= public_blog_url(blog.id) %>" class="read-more">READ MORE</a>
                 </div>
               </div>
           <% end %>
