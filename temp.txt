@@ -1,0 +1,12 @@
+old
+
+20170519050645_create_tags
+
+20170519050523_create_taggings
+
+
+new
+
+20170519050523_create_tags
+
+20170519050645_create_taggings
