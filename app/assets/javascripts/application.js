@@ -17,6 +17,6 @@
 //= require_tree .
 
 $(document).ready(function () {
-    menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
+    $('#menu-area').addClass('fadeOutLeft').removeClass('fadeInLeft in');
     console.log('help');
 });
