@@ -38,6 +38,7 @@ menuItem.on('click', function(){
 })
 $(document).ready(function () {
     menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
+    console.log('help');
 });
 /*--
 
