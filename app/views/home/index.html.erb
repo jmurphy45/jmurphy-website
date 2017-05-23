@@ -173,7 +173,7 @@
           <div class="experience">
             <div class="expr-group">
               <% @experiences.each do |work| %>
-                  <div class="single-expr">
+                  <div class="single-expr" style="padding-bottom: 30px;">
                     <h4><%= work.job %></h4>
                     <p><%= work.company + ', ' + work.city + ', ' + work.state + ', ' %>
                       <%= generate_date(work.start_date, work.end_date,work.present )  %></p>
