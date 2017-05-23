@@ -16,7 +16,4 @@
 //= require rails-ujs
 //= require_tree .
 
-$(document).ready(function () {
-    $('#menu-area').fadeOut();
-    console.log('help');
-});
+
