@@ -41,7 +41,6 @@ $(document).ready(function () {
     menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
     console.log('help');
 });
-/*--
 
 /*--
 	Testimonial Slider

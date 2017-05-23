@@ -25,9 +25,9 @@
   <% end %>
   <% if current_page?('/') %>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdWLY_Y6FL7QGW5vcO3zajUEsrKfQPNzI"></script>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <% else %>
-      <%= javascript_include_tag 'public-show', 'data-turbolinks-track': 'reload' %>
+
   <% end %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
