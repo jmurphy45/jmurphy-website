@@ -37,7 +37,7 @@ menuItem.on('click', function(){
     menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
 })
 $(document).ready(function () {
-    menuArea.hide();
+    menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
 });
 /*--
 
