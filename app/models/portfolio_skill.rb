@@ -1,4 +1,4 @@
 class PortfolioSkill < ApplicationRecord
-  belongs_to :portfolio
-  belongs_to :skill
+  belongs_to :portfolio,required: false
+  belongs_to :skill, required: false
 end

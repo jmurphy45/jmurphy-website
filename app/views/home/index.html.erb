@@ -69,8 +69,13 @@
         <div class="col-md-7 col-xs-12 mb-45">
           <div class="about-content text-left">
             <h2>Hello!</h2>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply rand text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professo.</p>
-            <p>Not simply random text. It has roots in a piee of classical Latin hayre manus,manus cina onek kosto..face dekhe manus cina jay na.</p>
+            <p>
+              I'm a web developer in Memphis with a Bachelors of Computer Science.
+              Looking for work in the web development industry.
+              I have an avid interest in making websites functional and pleasing to view.
+              While pursuing my degree I have helped others build or improve their websites,
+              and have worked on improving the functionality and visits to my fraternity’s website.
+              </p>
           </div>
         </div>
 
@@ -223,7 +228,7 @@
             <li><a href="#ser-design" data-toggle="tab"><i class="icon_heart_alt"></i><span>Iterate</span></a></li>
             <li><a href="#ser-develop" data-toggle="tab"><i class="icon_cog"></i><span>Deliver</span></a></li>
           </ul>
-          20170519050523_create_tags.rbs.rb-->
+
           <!-- Service Tab Panes -->
           <!--<div class="service-tab-content tab-content text-center">-->
 
@@ -272,14 +277,15 @@
       <!-- Section Title End -->
 
       <div class="row row-5">
-
+        <% @categories.each do |cat| %>
+            <p><%= cat.category.name %></p>
+        <% end %>
         <!-- Work Filter -->
         <div class="works-filter text-center">
           <button class="active" data-filter="*">all</button>
-          <button data-filter=".web">web</button>
-          <button data-filter=".design">design</button>
-          <button data-filter=".development">development</button>
-          <button data-filter=".brand">brand</button>
+          <% @categories.each do |cat| %>
+              <button data-filter=".<%= cat.category.name %>"><%= cat.category.name %></button>
+          <% end %>
         </div>
 
 
@@ -290,7 +296,7 @@
              <% @works.each do |work| %>
               <% if num == 1 || num == 6 %>
                   <% num += 1 %>
-                  <div class="works-item web development col-md-3 col-sm-4 col-xs-12">
+                  <div class="works-item <%= work.category.name %> col-md-3 col-sm-4 col-xs-12">
                     <a href="<%= public_portfolio_path work.id %>">
                       <%= image_tag work.long_potrait %>
                       <h5><%= work.name %></h5>
@@ -298,7 +304,7 @@
                   </div>
               <% elsif num == 2 || num == 3 || num == 4 || num == 7 || num == 8 || num == 9 %>
                   <% num += 1 %>
-                  <div class="works-item  col-md-3 col-sm-4 col-xs-12">
+                  <div class="works-item <%= work.category.name %> col-md-3 col-sm-4 col-xs-12">
                     <a href="<%= public_portfolio_path work.id %>">
                       <%= image_tag work.square %>
                       <h5><%= work.name %></h5>
@@ -307,7 +313,7 @@
               <% elsif num == 5 %>
                   <% num += 1 %>
                   <!--Work Item-->
-                  <div class="works-item col-md-6 col-sm-8 col-xs-12">
+                  <div class="works-item <%= work.category.name %> col-md-6 col-sm-8 col-xs-12">
                     <a href="<%= public_portfolio_path work.id %>">
                       <%= image_tag work.long_landscape %>
                       <h5><%= work.name %></h5>
