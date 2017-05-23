@@ -12,9 +12,12 @@
 //
 //= require jquery
 //= require turbolinks
+//= require bootstrap.min
 //= require plugins
+//= require maps
+//= require main
 //= require rails-ujs
-//= require_tree .
+
 
 $(document).ready(function () {
     $('#menu-area').fadeOut();
