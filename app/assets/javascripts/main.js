@@ -32,6 +32,7 @@ menuOpen.on('click', function(){
 })
 menuClose.on('click', function(){
     menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
+    console.log('help');
 })
 menuItem.on('click', function(){
     menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
