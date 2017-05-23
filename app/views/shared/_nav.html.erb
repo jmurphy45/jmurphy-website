@@ -25,14 +25,25 @@
 
     <!-- Menu Nav -->
     <nav>
-      <ul>
-        <li class="active"><%= link_to 'home', home_path(:anchor => "hero-area") %></li>
-        <li><%= link_to 'about', '#about-area' %></li>
-        <li><%= link_to 'service', '#service-area' %></li>
-        <li><%= link_to 'work', '#work-area' %></li>
-        <li><%= link_to 'blog', home_path(:anchor => 'blog-area') %></li>
-        <li><%= link_to 'contact', home_path(:anchor => 'contact-area') %></li>
-      </ul>
+      <% if current_page?('/') %>
+          <ul>
+            <li class=""><%= link_to 'home', '#hero-area' %></li>
+            <li><%= link_to 'about', '#about-area' %></li>
+            <li><%= link_to 'Process', '#service-area' %></li>
+            <li><%= link_to 'work', '#work-area' %></li>
+            <li><%= link_to 'blog', '#blog-area' %></li>
+            <li><%= link_to 'contact', '#contact-area' %></li>
+          </ul>
+      <% else %>
+          <ul>
+            <li class=""><%= link_to 'home', home_path %></li>
+            <li><%= link_to 'about', home_path(:anchor => 'about-area') %></li>
+            <li><%= link_to 'Process', home_path(:anchor => 'service-area') %></li>
+            <li><%= link_to 'work', home_path(:anchor => 'work-area') %></li>
+            <li><%= link_to 'blog', home_path(:anchor => 'blog-area') %></li>
+            <li><%= link_to 'contact', home_path(:anchor => 'contact-area') %></li>
+          </ul>
+      <% end %>
     </nav>
 
     <!-- Social -->
