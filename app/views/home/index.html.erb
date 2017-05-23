@@ -222,42 +222,42 @@
 
           <!-- Service Tabs List -->
           <ul class="service-tab-list text-center mb-70">
-            <li class="active"><a href="#ser-photo" data-toggle="tab"><i class="icon_camera_alt"></i><span>Think</span></a></li>
-            <li><a href="#ser-product" data-toggle="tab"><i class="icon_heart_alt"></i><span>Design</span></a></li>
-            <li class=""><a href="#ser-idea" data-toggle="tab"><i class="icon_lightbulb_alt"></i><span>Create</span></a></li>
-            <li><a href="#ser-design" data-toggle="tab"><i class="icon_heart_alt"></i><span>Iterate</span></a></li>
-            <li><a href="#ser-develop" data-toggle="tab"><i class="icon_cog"></i><span>Deliver</span></a></li>
+            <li class="active"><a href="#ser-photo" data-toggle="tab"><i class="icon_lightbulb_alt"></i><span>Think</span></a></li>
+            <li><a href="#ser-product" data-toggle="tab"><i class="icon_pencil"></i><span>Design</span></a></li>
+            <li class=""><a href="#ser-idea" data-toggle="tab"><i class="icon_tools"></i><span>Create</span></a></li>
+            <li><a href="#ser-design" data-toggle="tab"><i class="icon_refresh"></i><span>Iterate</span></a></li>
+            <li><a href="#ser-develop" data-toggle="tab"><i class="icon_mail"></i><span>Deliver</span></a></li>
           </ul>
 
           <!-- Service Tab Panes -->
-          <!--<div class="service-tab-content tab-content text-center">-->
+          <div class="service-tab-content tab-content text-center">
 
             <!--&lt;!&ndash; Service Tab Pane &ndash;&gt;-->
-            <!--<div class="service-pane tab-pane active" id="ser-photo">-->
-              <!--<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>-->
-            <!--</div>-->
+            <div class="service-pane tab-pane active" id="ser-photo">
+              <p>The development process starts at the thought process. What does the client need, and what will make them succeed.</p>
+            </div>
 
             <!--&lt;!&ndash; Service Tab Pane &ndash;&gt;-->
-            <!--<div class="service-pane tab-pane" id="ser-product">-->
-              <!--<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>-->
-            <!--</div>-->
+            <div class="service-pane tab-pane" id="ser-product">
+              <p>Without a through design process project will not be successful. Due to the potential of scope creep and other thing being introduced.</p>
+            </div>
 
             <!--&lt;!&ndash; Service Tab Pane &ndash;&gt;-->
-            <!--<div class="service-pane tab-pane" id="ser-idea">-->
-              <!--<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor. Contrary to popular belief.</p>-->
-            <!--</div>-->
+            <div class="service-pane tab-pane" id="ser-idea">
+              <p>This next step involves implementing the current iterations user storries in priority of the client.</p>
+            </div>
 
             <!--&lt;!&ndash; Service Tab Pane &ndash;&gt;-->
-            <!--<div class="service-pane tab-pane" id="ser-design">-->
-              <!--<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock. </p>-->
-            <!--</div>-->
+            <div class="service-pane tab-pane" id="ser-design">
+              <p>After the end of the iteration let the client give you feedback, and create new user stories to develop the client project.</p>
+            </div>
 
             <!--&lt;!&ndash; Service Tab Pane &ndash;&gt;-->
-            <!--<div class="service-pane tab-pane" id="ser-develop">-->
-              <!--<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor. Contrary to popular belief, Lorem Ipsum is not simply random text.</p>-->
-            <!--</div>-->
+            <div class="service-pane tab-pane" id="ser-develop">
+              <p>Finally, after the client is happy with the project deliver and deploy the project.</p>
+            </div>
 
-          <!--</div>-->
+          </div>
 
         </div>
 
@@ -276,10 +276,6 @@
       </div>
       <!-- Section Title End -->
 
-      <div class="row row-5">
-        <% @categories.each do |cat| %>
-            <p><%= cat.category.name %></p>
-        <% end %>
         <!-- Work Filter -->
         <div class="works-filter text-center">
           <button class="active" data-filter="*">all</button>

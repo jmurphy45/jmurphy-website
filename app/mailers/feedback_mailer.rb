@@ -1,8 +1,8 @@
 class FeedbackMailer < ApplicationMailer
-  default from: "feedback@jmurphy.us"
+  default from: "jcmurphy1267@gmail.com"
 
-  def seend_feedback(message)
+  def send_feedback(message)
     @feedback = message
-    mail(to: 'jmrphyii@memphis.edu', subject: 'feedback')
+    mail(to: 'jcmurphy1267@gmail.com', subject: 'feedback')
   end
 end
