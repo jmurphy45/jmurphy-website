@@ -74,7 +74,7 @@
               Looking for work in the web development industry.
               I have an avid interest in making websites functional and pleasing to view.
               While pursuing my degree I have helped others build or improve their websites,
-              and have worked on improving the functionality and visits to my fraternity’s website.
+              and have worked on improving the functionality of multiple client websites.
               </p>
           </div>
         </div>
@@ -177,7 +177,7 @@
                     <h4><%= work.job %></h4>
                     <p><%= work.company + ', ' + work.city + ', ' + work.state + ', ' %>
                       <%= generate_date(work.start_date, work.end_date,work.present )  %></p>
-                    <p></p>
+                    <p><%= work.description  %></p>
                   </div>
               <% end %>
             </div>
