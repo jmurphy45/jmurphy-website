@@ -36,9 +36,9 @@ menuClose.on('click', function(){
 menuItem.on('click', function(){
     menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
 })
-    $(document).ready(function () {
-        menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
-    });
+$(document).ready(function () {
+    menuArea.hide();
+});
 /*--
 
 /*--
