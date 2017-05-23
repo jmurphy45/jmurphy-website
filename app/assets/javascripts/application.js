@@ -15,3 +15,8 @@
 //= require plugins
 //= require rails-ujs
 //= require_tree .
+
+$(document).ready(function () {
+    menuArea.addClass('fadeOutLeft').removeClass('fadeInLeft in');
+    console.log('help');
+});
