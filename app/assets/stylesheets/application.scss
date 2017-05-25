@@ -53,6 +53,11 @@
 @import 'footer';
 @import 'expierence';
 
+#download-resume{
+  background-color: $theme-color;
+  color: #FFFFFF;
+  padding: 6px 36px;
+}
 
 @import 'css/eleganticons.min';
 @import 'css/montserrat';
