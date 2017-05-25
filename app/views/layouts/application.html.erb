@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jmurphy</title>
+    <title>jmurphy</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <% if Rails.env == "production" || request.host == "jmurphy-dev.herokuapp.com" %>
+       <%= render 'shared/analytics' %>
+    <% end %>
   </head>
 
   <body>

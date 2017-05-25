@@ -62,3 +62,4 @@ gem "fog-aws"
 gem "carrierwave-aws"
 gem "annotate"
 gem 'devise'
+gem 'sitemap_generator'
