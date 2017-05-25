@@ -6,5 +6,9 @@
 
     ga('create', 'UA-25135483-7', 'auto');
     ga('send', 'pageview');
+    setTimeout("ga('send', 'event', { eventCategory: '30 seconds on page', eventAction: 'Read' })", 30000);
+    setTimeout("ga('send', 'event', { eventCategory: '60 seconds on page', eventAction: 'Read' })", 60000);
+    setTimeout("ga('send', 'event', { eventCategory: '120 seconds on page', eventAction: 'Read' })", 60000);
+
 
 </script>

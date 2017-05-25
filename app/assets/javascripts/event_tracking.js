@@ -15,3 +15,12 @@ $('.works-item a').on('click',function(){
         eventLabel: 'portfolio view'
     });
 });
+
+$('#latest-works').on('click',function(){
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'Portfolio Click',
+        eventAction: 'Click latest works',
+        eventLabel: 'portfolio view'
+    });
+});
