@@ -4,6 +4,13 @@ SitemapGenerator::Sitemap.default_host = "http://www.jmurphy.us"
 SitemapGenerator::Sitemap.public_path = 'tmp/sitemaps/'
 # store on S3 using Fog (pass in configuration values as shown above if needed)
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::WaveAdapter.new
+
+
+SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(fog_provider: 'AWS',
+                                                                    aws_access_key_id: ENV['ACCESS_KEY'],
+                                                                    aws_secret_access_key: ENV['SECRET_KEY'],
+                                                                    fog_directory: 'jmurphy-website',
+                                                                    fog_region: 'us-east-1')
 # inform the map cross-linking where to find the other maps
 SitemapGenerator::Sitemap.sitemaps_host = "http://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com/"
 # pick a namespace within your bucket to organize your maps
