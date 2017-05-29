@@ -12,7 +12,7 @@ SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(fog_provider
                                                                     fog_directory: 'jmurphy-website',
                                                                     fog_region: 'us-east-1')
 # inform the map cross-linking where to find the other maps
-SitemapGenerator::Sitemap.sitemaps_host = "http://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com/"
+SitemapGenerator::Sitemap.sitemaps_host = "http://jmurphy-website.s3.amazonaws.com/"
 # pick a namespace within your bucket to organize your maps
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 
