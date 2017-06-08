@@ -18,6 +18,6 @@ SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 
 SitemapGenerator::Sitemap.create do
   Portfolio.find_each do |work|
-    add portfolio_path(work.id), lastmod: work.updated_at
+    add portfolio_path(work.id), lastmod: work.updated_at, changefreq: 'never'
   end
 end
